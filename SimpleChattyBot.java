@@ -54,13 +54,26 @@ public class SimpleChattyBot {
         System.out.println(opTwo);
         System.out.println(opThree);
         System.out.println(opFour);
+        
+        int op1 = 1;
+        int op2 = 2;
+        int op3 = 3;
+        int op4 = 4;
        
-        String userInput = scanner.nextLine();
-        if(userInput.equals(opTwo.charAt(2))){
-            end();
-        } else{
-            System.out.println("Please, try again.");
+        int userInput = scanner.nextInt();
+        int ans = op2;
+        if(userInput == ans) {
+        	end();
         }
+        while(userInput != ans){
+        	 System.out.println("Please, try again.");
+        	 int attempt = scanner.nextInt();
+        	 if(attempt == ans) {
+         		return;
+         	}
+        }
+            
+         
     }
 
     static void end() {
